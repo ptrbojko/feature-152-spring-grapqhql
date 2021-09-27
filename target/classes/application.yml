@@ -1,0 +1,20 @@
+spring:
+  autoconfigure:
+    exclude[0]: org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration
+    exclude[1]: org.springframework.boot.actuate.autoconfigure.security.servlet.ManagementWebSecurityAutoConfiguration
+  graphql:
+    schema:
+      locations: classpath:graphql/
+      printer:
+        enabled: true
+
+security:
+  basic:
+    enabled: false
+
+management:
+  security:
+    enabled: false
+
+
+

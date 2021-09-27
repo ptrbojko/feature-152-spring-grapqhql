@@ -1,0 +1,25 @@
+type Query {
+    project(slug: ID!): Project
+}
+
+type Mutation {
+    createProjectWithWorkingInput(newProject: WorkingProjectInput!): Project!
+    createProjectWithBadInput(newProject: BadProjectInput!): Project!
+}
+
+input WorkingProjectInput {
+    name: String!
+    repositoryUrl: String!
+}
+
+input BadProjectInput {
+    name: String!
+    repositoryUrl: String!
+}
+
+type Project {
+    slug: ID!
+    name: String!
+    repositoryUrl: String!
+}
+
